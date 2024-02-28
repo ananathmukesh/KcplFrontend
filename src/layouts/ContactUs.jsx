@@ -21,7 +21,7 @@ const ContactUs = () => {
                   >
                     Customer Care
                   </p>
-                  <p style={{ color: "#646464", fontSize: "20px" }}>
+                  <p style={{ color: "#646464", fontSize: "16px" }}>
                     CustomerCare@kodukku.com
                   </p>
                   <p style={{ fontSize: "1.5rem", marginTop: "30px" }}>
@@ -29,7 +29,7 @@ const ContactUs = () => {
                   </p>
                   <p
                     className=""
-                    style={{ color: "#646464", fontSize: "20px" }}
+                    style={{ color: "#646464", fontSize: "16px" }}
                   >
                     253 Thanthai Periyar Nagar,
                     <br />
@@ -40,7 +40,7 @@ const ContactUs = () => {
                   <p style={{ fontSize: "1.5rem", marginTop: "30px" }}>Email</p>
                   <p
                     className=""
-                    style={{ color: "#646464", fontSize: "20px" }}
+                    style={{ color: "#646464", fontSize: "16px" }}
                   >
                     Hr@kodukku.com
                   </p>

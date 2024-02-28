@@ -4,7 +4,7 @@ import Sidebar from "./SideBar/Sidebar";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 
 const Main = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -19,7 +19,7 @@ const Main = () => {
 
       {/* Conditional rendering of Sidebar based on isSidebarOpen */}
       <div className="d-md-none d-block">
-        {isSidebarOpen && <Sidebar isOpen={isSidebarOpen} />}
+        {isSidebarOpen && <Sidebar isOpen={isSidebarOpen}  setSidebarOpen={setSidebarOpen} />}
       </div>
       <div className="container py-4">
         <Outlet />

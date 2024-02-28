@@ -12,13 +12,17 @@ import { BiCategory } from "react-icons/bi";
 import { MdInfoOutline } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoMdLogIn } from "react-icons/io";
+import { useMediaQuery } from '@mui/material';
 
 import { Link } from "react-router-dom";
 
 import "./Side.css";
 
-const Sidebar = () => {
+const Sidebar = ({setSidebarOpen}) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const isSmallScreen = useMediaQuery('(max-width:768px)');
+
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -139,7 +143,7 @@ const Sidebar = () => {
               >
                 <div className="d-flex mt-2 align-items-center">
                   <i class="fi fi-rr-building"></i>
-                  <p className="mb-0 ms-4 cate-text text-wrap"> About Us </p>
+                  <p onClick={()=>isSmallScreen? setSidebarOpen(false) : setSidebarOpen(undefined)} className="mb-0 ms-4 cate-text text-wrap"> About Us </p>
                 </div>
               </Link>
             </li>
@@ -156,7 +160,7 @@ const Sidebar = () => {
               >
                 <div className="d-flex mt-2 align-items-center">
                   <MdInfoOutline className="icon" />
-                  <p className="mb-0 ms-4 cate-text text-wrap">
+                  <p onClick={()=>isSmallScreen? setSidebarOpen(false) : setSidebarOpen(undefined)} className="mb-0 ms-4 cate-text text-wrap">
                     Terms & Condition
                   </p>
                 </div>
@@ -175,7 +179,7 @@ const Sidebar = () => {
               >
                 <div className="d-flex align-items-center">
                   <FiPhoneCall className="icon" />
-                  <p className="mb-0 ms-4 cate-text">Contact Us</p>
+                  <p onClick={()=>isSmallScreen? setSidebarOpen(false) : setSidebarOpen(undefined)} className="mb-0 ms-4 cate-text">Contact Us</p>
                 </div>
               </Link>
             </li>

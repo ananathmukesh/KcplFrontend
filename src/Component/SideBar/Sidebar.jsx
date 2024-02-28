@@ -143,7 +143,7 @@ const Sidebar = ({setSidebarOpen}) => {
               >
                 <div className="d-flex mt-2 align-items-center">
                   <i class="fi fi-rr-building"></i>
-                  <p onClick={()=>isSmallScreen? setSidebarOpen(false) : setSidebarOpen(undefined)} className="mb-0 ms-4 cate-text text-wrap"> About Us </p>
+                  <p  onClick={ isSmallScreen ? () => setSidebarOpen(false) :  undefined} className="mb-0 ms-4 cate-text text-wrap"> About Us </p>
                 </div>
               </Link>
             </li>
@@ -160,7 +160,9 @@ const Sidebar = ({setSidebarOpen}) => {
               >
                 <div className="d-flex mt-2 align-items-center">
                   <MdInfoOutline className="icon" />
-                  <p onClick={()=>isSmallScreen? setSidebarOpen(false) : setSidebarOpen(undefined)} className="mb-0 ms-4 cate-text text-wrap">
+                  <p   onClick={ isSmallScreen ? () => setSidebarOpen(false) :  undefined}
+                 
+                   className="mb-0 ms-4 cate-text text-wrap">
                     Terms & Condition
                   </p>
                 </div>
@@ -179,7 +181,7 @@ const Sidebar = ({setSidebarOpen}) => {
               >
                 <div className="d-flex align-items-center">
                   <FiPhoneCall className="icon" />
-                  <p onClick={()=>isSmallScreen? setSidebarOpen(false) : setSidebarOpen(undefined)} className="mb-0 ms-4 cate-text">Contact Us</p>
+                  <p  onClick={ isSmallScreen ? () => setSidebarOpen(false) :  undefined} className="mb-0 ms-4 cate-text">Contact Us</p>
                 </div>
               </Link>
             </li>

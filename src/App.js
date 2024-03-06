@@ -18,7 +18,9 @@ import 'primereact/resources/primereact.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import DynamicInputFields from "./utils/appenform";
 import PropertyDetailFormPage from "./Component/Profile/PropertyDetailForm";
-
+import About from "./layouts/About";
+import ContactUs from "./layouts/ContactUs";
+import TermsPolicy from "./layouts/TermsPolicy";
 
 function App() {
   const toast = useRef(null);
@@ -34,6 +36,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/main" element={<Main />}>
             <Route path="/main/jobs" element={<Job />} />
+            <Route path="/main/ContactUs" element={<ContactUs />} />
+            <Route path="/main/About" element={<About />} />
+            <Route path="/main/Terms" element={<TermsPolicy />} />
             <Route path="/main/vehicle" element={<Vehicle />} />
             <Route path="/main/demo" element={<Demo />} />
             <Route path="/main/form" element={<MyForm />} />

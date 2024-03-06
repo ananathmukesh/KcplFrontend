@@ -48,7 +48,7 @@ const ContactInformationForm = () => {
 
   const addContactValue = async (e) => {
     e.preventDefault();
-    const contact = await ContactInformation(1);
+    const contact = await ContactInformation(authdata.id);
     if (contact) {
       setContactForm(contact);
     } else {

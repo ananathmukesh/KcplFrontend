@@ -36,8 +36,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/ap" element={<DynamicInputFields />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Maintainence />}>
-        
+          <Route path="/" element={<Main />}>
+            
             <Route path="/main/jobs" element={<Job />} />
             <Route path="/main/ContactUs" element={<ContactUs />} />
             <Route path="/main/About" element={<About />} />

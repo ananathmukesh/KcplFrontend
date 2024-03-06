@@ -8,7 +8,7 @@ const ContactUs = () => {
         {/* <div className="card" style={{ margin: "40px 20px" }}> */}
         <div className="row">
           <div className="col-md-6 col-12">
-            <img src={call} alt="" className="img-fluid" />
+            <img src={call} alt="" className="img-fluid" width="200px" />
           </div>
           <div className="col-md-6 col-12">
             <div className="">

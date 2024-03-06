@@ -5,19 +5,30 @@
   border-radius: 18px;
 }
 
-.texts h5 {
+.Company-Profile .texts h5 {
   font-weight: 500;
   font-size: 20px;
 }
 
-.line {
+.Company-Profile .line {
   margin: 10px 0px;
 }
 
-p {
+.Company-Profile p {
   font-weight: 500;
 }
-p span {
+.Company-Profile p span {
   color: #8f8f8f;
   font-weight: 400;
+}
+
+.invalid {
+  border-color: red; /* Change the border color to red */
+  color: red; /* Change the text color to red */
+}
+
+/* Prevent text size changes on focus */
+input[type="text"]:focus,
+textarea:focus {
+  font-size: inherit; /* or specify the desired font size */
 }

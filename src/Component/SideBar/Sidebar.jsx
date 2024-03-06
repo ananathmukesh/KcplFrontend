@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import "./Side.css";
 
 const Sidebar = ({setSidebarOpen}) => {
-  const authdata = useSelector((state) => state.auth.user.user);
+  // const authdata = useSelector((state) => state.auth.user.user);
 
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 

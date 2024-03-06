@@ -30,11 +30,11 @@ function App() {
      
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          
           <Route path="/login" element={<Login />} />
           <Route path="/ap" element={<DynamicInputFields />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/main" element={<Main />}>
+          <Route path="/" element={<Main />}>
             <Route path="/main/jobs" element={<Job />} />
             <Route path="/main/ContactUs" element={<ContactUs />} />
             <Route path="/main/About" element={<About />} />

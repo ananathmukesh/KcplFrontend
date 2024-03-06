@@ -43,7 +43,7 @@ const Sidebar = ({setSidebarOpen}) => {
               {/* <Link to="/main/jobs"> */}
               <FaRegUserCircle className="ts-icon text-white" />
               {/* </Link> */}
-              <Link to="/">
+              <Link to="/login">
                 <IoPowerOutline className="ts-icon text-white" />
               </Link>
             </div>

@@ -13,15 +13,12 @@ import { MdInfoOutline } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoMdLogIn } from "react-icons/io";
 import { useMediaQuery } from '@mui/material';
-import { useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
 
 import "./Side.css";
 
 const Sidebar = ({setSidebarOpen}) => {
-  // const authdata = useSelector((state) => state.auth.user.user);
-
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const isSmallScreen = useMediaQuery('(max-width:768px)');
@@ -44,9 +41,8 @@ const Sidebar = ({setSidebarOpen}) => {
               <IoHeartOutline className="ts-icon" />
               <GoBell className="ts-icon" />
               <Link to="/main/jobs">
-      <FaRegUserCircle className="ts-icon text-white" />
-    </Link>
-               
+              <FaRegUserCircle className="ts-icon text-white" />
+              </Link> 
               <Link to="/login">
                 <IoPowerOutline className="ts-icon text-white" />
               </Link>

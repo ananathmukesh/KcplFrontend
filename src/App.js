@@ -21,8 +21,6 @@ import PropertyDetailFormPage from "./Component/Profile/PropertyDetailForm";
 import About from "./layouts/About";
 import ContactUs from "./layouts/ContactUs";
 import TermsPolicy from "./layouts/TermsPolicy";
-import Maintainence from "./layouts/Maintainence";
-
 
 function App() {
   const toast = useRef(null);
@@ -37,7 +35,6 @@ function App() {
           <Route path="/ap" element={<DynamicInputFields />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Main />}>
-            
             <Route path="/main/jobs" element={<Job />} />
             <Route path="/main/ContactUs" element={<ContactUs />} />
             <Route path="/main/About" element={<About />} />

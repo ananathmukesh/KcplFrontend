@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import Main from "./Component/Main";
 import {
@@ -12,30 +11,33 @@ import Vehicle from "./layouts/Vehicle";
 import Login from "./auth/Login";
 import Demo from "./layouts/demo";
 import Register from "./auth/Register";
-import ResetPassword from "./auth/ResetPassword";
-import About from "./layouts/About";
-import ContactUs from "./layouts/ContactUs";
-import TermsPolicy from "./layouts/TermsPolicy";
-import OrderHistory from "./layouts/OrderHistory";
-import Maintainence from "./layouts/Maintainence";
+import MyForm from "./utils/form";
+import { useRef } from "react";
+import 'primeflex/primeflex.css';  
+import 'primereact/resources/primereact.css';
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
+import DynamicInputFields from "./utils/appenform";
+import PropertyDetailFormPage from "./Component/Profile/PropertyDetailForm";
+
 
 function App() {
+  const toast = useRef(null);
+
   return (
     <div className="App">
+     
       <Router>
         <Routes>
-          {/* <Route path="/" element={<Maintainence />} /> */}
+          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/ap" element={<DynamicInputFields />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/resetpass" element={<ResetPassword />} />
-          <Route path="/" element={<Main />}>
-            <Route index element={<Maintainence />} />
-            <Route path="/main/ContactUs" element={<ContactUs />} />
-            <Route path="/main/About" element={<About />} />
-            <Route path="/main/Terms" element={<TermsPolicy />} />
+          <Route path="/main" element={<Main />}>
             <Route path="/main/jobs" element={<Job />} />
             <Route path="/main/vehicle" element={<Vehicle />} />
             <Route path="/main/demo" element={<Demo />} />
+            <Route path="/main/form" element={<MyForm />} />
+            <Route path="/main/form1" element={<PropertyDetailFormPage />} />
           </Route>
         </Routes>
       </Router>

@@ -13,6 +13,7 @@ import { MdInfoOutline } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoMdLogIn } from "react-icons/io";
 import { useMediaQuery } from '@mui/material';
+import { useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
 

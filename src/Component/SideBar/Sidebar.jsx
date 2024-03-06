@@ -44,12 +44,12 @@ const Sidebar = ({setSidebarOpen}) => {
               <IoHeartOutline className="ts-icon" />
               <GoBell className="ts-icon" />
               {
-                authdata ? (
-                  <Link to="/main/jobs">
-                  <FaRegUserCircle className="ts-icon text-white" />
-                  </Link>
-                ) : null
-              }
+  authdata && (
+    <Link to="/main/jobs">
+      <FaRegUserCircle className="ts-icon text-white" />
+    </Link>
+  )
+}
                
               <Link to="/login">
                 <IoPowerOutline className="ts-icon text-white" />

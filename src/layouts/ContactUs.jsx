@@ -6,7 +6,9 @@ const ContactUs = () => {
     <div>
       <div className="card">
         {/* <div className="card" style={{ margin: "40px 20px" }}> */}
-        <div className="row">
+        <div style={{
+          display:'flex'
+        }}>
           <div className="col-md-6 col-12">
             <img src={call} alt="" className="img-fluid" width="200px" />
           </div>

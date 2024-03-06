@@ -19,6 +19,8 @@ import { Link } from "react-router-dom";
 import "./Side.css";
 
 const Sidebar = ({setSidebarOpen}) => {
+  const authdata = useSelector((state) => state.auth.user.user);
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const isSmallScreen = useMediaQuery('(max-width:768px)');
@@ -40,9 +42,14 @@ const Sidebar = ({setSidebarOpen}) => {
             <div className="ts-icons">
               <IoHeartOutline className="ts-icon" />
               <GoBell className="ts-icon" />
-              <Link to="/main/jobs">
-              <FaRegUserCircle className="ts-icon text-white" />
-              </Link> 
+              {
+                authdata ? (
+                  <Link to="/main/jobs">
+                  <FaRegUserCircle className="ts-icon text-white" />
+                  </Link>
+                ) : null
+              }
+               
               <Link to="/login">
                 <IoPowerOutline className="ts-icon text-white" />
               </Link>
